@@ -1,0 +1,362 @@
+.work-stages {
+  padding: 80px 0;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.stages-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  text-shadow: none;
+}
+
+.stages-navigation {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  transform: skewX(-10deg);
+}
+
+.nav-btn:hover {
+  background: #ffa726;
+  border-color: #ffa726;
+  color: white;
+  transform: skewX(-10deg) scale(1.1);
+}
+
+.nav-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: skewX(-10deg);
+}
+
+.nav-btn.disabled:hover {
+  background: white;
+  border-color: #e9ecef;
+  color: #333;
+  transform: skewX(-10deg);
+}
+
+.nav-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.stages-slider {
+  margin-bottom: 40px;
+}
+
+.stages-container {
+  overflow: visible;
+  position: relative;
+}
+
+.stages-grid {
+  display: flex;
+  gap: 30px;
+  overflow: visible;
+  transform: translateX(0);
+  transition: transform 0.6s ease;
+}
+
+.stage-card {
+  background: white;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 600px;
+  clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 50%, calc(100% - 30px) 100%, 0 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffa726 0%, #ffb74d 100%);
+}
+
+.stage-card:last-child {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.stage-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.15);
+}
+
+/* Анимации убраны для простого скролла */
+
+.stage-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stage-icon {
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.stage-info {
+  flex: 1;
+}
+
+.stage-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.stage-duration {
+  font-size: 14px;
+  color: #666;
+  background: #f8f9fa;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.stage-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0 0 25px 0;
+  flex-grow: 1;
+}
+
+.stage-btn {
+  width: 100%;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transform: skewX(-10deg);
+  margin-top: auto;
+}
+
+.stage-btn-green {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+}
+
+.stage-btn:hover {
+  transform: skewX(-10deg) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.stage-btn-green:hover {
+  background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.stages-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.stage-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.stage-dot.active {
+  background: #ffa726;
+  transform: scale(1.2);
+}
+
+.stage-dot:hover {
+  background: #ffa726;
+  opacity: 0.7;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+  .stages-navigation {
+    display: none;
+  }
+  
+  .stages-header {
+    justify-content: center;
+  }
+  
+  .stages-grid {
+    flex-direction: column;
+    gap: 20px;
+    transform: none !important;
+  }
+  
+  .stage-card {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    flex: 1;
+  }
+  
+  .stage-card {
+    padding: 25px;
+  }
+  
+  .stage-title {
+    font-size: 20px;
+  }
+  
+  .stage-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-stages {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .stages-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .stages-grid {
+    flex-direction: column;
+    gap: 15px;
+    transform: none !important;
+  }
+  
+  .stage-card {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    flex: 1;
+  }
+  
+  .stage-card {
+    padding: 20px;
+  }
+  
+  .stage-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .stage-icon {
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .stage-title {
+    font-size: 18px;
+  }
+  
+  .stage-description {
+    font-size: 14px;
+  }
+  
+  .stage-btn {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .nav-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .stage-card {
+    padding: 15px;
+  }
+  
+  .stage-icon {
+    font-size: 28px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .stage-title {
+    font-size: 16px;
+  }
+  
+  .stage-description {
+    font-size: 13px;
+  }
+  
+  .stage-btn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+}

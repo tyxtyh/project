@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  # Замените на URL вашего backend после деплоя
+  REACT_APP_API_URL = "https://your-backend-url.onrender.com/api"
+

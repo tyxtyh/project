@@ -1,0 +1,182 @@
+.footer {
+  background: #333;
+  color: white;
+  padding: 60px 0 20px 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: #ffa726;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffa726;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.contact-icon {
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.contact-title {
+  font-size: 14px;
+  color: #ffa726;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.contact-value {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.contact-subtitle {
+  font-size: 12px;
+  color: #999;
+}
+
+.footer-bottom {
+  border-top: 1px solid #555;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-logo h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #ffa726;
+}
+
+.footer-logo p {
+  color: #ccc;
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-legal {
+  flex: 1;
+  max-width: 600px;
+}
+
+.footer-legal p {
+  color: #999;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-links a {
+  color: #ffa726;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffed4e;
+}
+
+.footer-links span {
+  color: #999;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px 0;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    gap: 25px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+  }
+  
+  .contact-item {
+    gap: 10px;
+  }
+  
+  .contact-icon {
+    font-size: 18px;
+    width: 20px;
+  }
+  
+  .contact-value {
+    font-size: 14px;
+  }
+  
+  .footer-logo h4 {
+    font-size: 20px;
+  }
+}

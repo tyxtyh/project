@@ -1,70 +1,140 @@
-# Getting Started with Create React App
+# 🚴 EKO-BIKE - Сайт продажи электротранспорта
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Современный сайт для продажи электротрициклов и электровелосипедов с backend сервером для обработки заявок.
 
-## Available Scripts
+## 📧 Все заявки отправляются на: **pasha007@eko-bike.ru**
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Быстрый старт
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Установите зависимости:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+# Frontend
+npm install
 
-### `npm test`
+# Backend
+cd server
+npm install
+cd ..
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Настройте backend:
 
-### `npm run build`
+Создайте файл `server/.env`:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```env
+PORT=5000
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_app_password
+RECIPIENT_EMAIL=pasha007@eko-bike.ru
+FRONTEND_URL=http://localhost:3000
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Получите пароль приложения Gmail:**
+https://myaccount.google.com/apppasswords
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Запустите проект:
 
-### `npm run eject`
+```bash
+# Терминал 1: Backend
+npm run server
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Терминал 2: Frontend
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Сайт откроется на http://localhost:3000 🎉
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📚 Документация
 
-## Learn More
+- **[BACKEND_SETUP.md](BACKEND_SETUP.md)** - Полная инструкция по настройке
+- **[server/README.md](server/README.md)** - Документация API
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ Технологии
 
-### Code Splitting
+### Frontend:
+- React 19
+- CSS3
+- React Icons
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Backend:
+- Node.js
+- Express
+- Nodemailer
+- CORS
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📋 Функции
 
-### Making a Progressive Web App
+✅ Каталог электротранспорта  
+✅ Фильтрация по категориям  
+✅ Модальные окна товаров  
+✅ Форма обратного звонка  
+✅ Форма консультации  
+✅ Форма заказа товара  
+✅ Отправка email на pasha007@eko-bike.ru  
+✅ Галерея фотографий  
+✅ Отзывы клиентов  
+✅ Адаптивный дизайн  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📁 Структура проекта
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+rasprodazha/
+├── server/              # Backend сервер (Node.js + Express)
+│   ├── config/
+│   ├── routes/
+│   ├── services/
+│   └── server.js
+│
+├── src/                 # Frontend React
+│   ├── components/
+│   ├── services/
+│   └── App.js
+│
+├── public/
+│   └── img/
+│
+└── package.json
+```
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🌐 Развертывание
 
-### `npm run build` fails to minify
+### Backend: 
+- Render.com
+- Railway.app
+- Vercel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Frontend:
+- Netlify
+- Vercel
+- GitHub Pages
+
+Подробнее в **BACKEND_SETUP.md**
+
+---
+
+## 📞 Контакты
+
+- Email: pasha007@eko-bike.ru
+- Телефон: +7 (499) 346-81-66
+- Адрес: г. Москва, Колодезный переулок 2Ас9
+
+---
+
+## 📝 Лицензия
+
+ISC
